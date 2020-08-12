@@ -35,7 +35,7 @@ namespace Debtor.Core
 
             foreach( var borrower in Borrowers)
             {
-                var borrowerString = indexOfBorrowersList + ". " + borrower.Name + " - " + borrower.CashAmount + " zł !";
+                var borrowerString = indexOfBorrowersList + ". " + borrower.Name + " - " + borrower.CashAmount + " PLN !";
                 indexOfBorrowersList++;
                 borrowersListOfStrings.Add(borrowerString);
             }
