@@ -77,7 +77,6 @@ namespace Debtor
                         break;
 
                 }
-                return;
             }
             
         }
