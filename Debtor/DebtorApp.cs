@@ -43,7 +43,43 @@ namespace Debtor
         }
         public void ChoiceYourAction()
         {
+            Console.WriteLine(" ");
+            Console.WriteLine("---------------" +
+                "|" + " Choice Your Action! "+ "|"+
+                "---------------");
+            var userInput = default(string);
+            while(userInput != "exit")
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine("----  add    - Adding a debtor to the list.     ----");
+                Console.WriteLine("----  delete - Cancel the debt to the debtor.   ----");
+                Console.WriteLine("----  list   - Show list of your debtor.        ----");
+                Console.WriteLine("----  exit   - Exit from App.                   ----");
+                Console.WriteLine(" ");
+                userInput = Console.ReadLine();
+                userInput = userInput.ToLower();
 
+                switch (userInput)
+                {
+                    case "add":
+                        AddBorrower();
+                        break;
+                    case "delete":
+                        DeleteBorrower();
+                        break;
+                    case "list":
+                        ListAllBorrower();
+                        break;
+                    case "exit":
+                        return;
+                    default:
+                        Console.WriteLine("This action does not exist");
+                        break;
+
+                }
+                return;
+            }
+            
         }
     }
 }

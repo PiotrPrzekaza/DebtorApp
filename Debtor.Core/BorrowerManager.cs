@@ -5,6 +5,10 @@ namespace Debtor.Core
     public class BorrowerManager
     {
         private List<Borrower> Borrowers { get; set; }
+        public BorrowerManager()
+        {
+            Borrowers = new List<Borrower>();
+        }
 
         public void AddBorrower(string name, decimal amount)
         {
